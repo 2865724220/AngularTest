@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS test05</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+	<div ng-app="myApp" ng-controller="myName">
+	<p>姓名为：{{lastname}} 的家庭成员</p>
+		<ul>
+			<li ng-repeat="x in names">
+				{{x}} {{lastname}}
+			</li>
+		</ul>
+	</div>
+
+</body>
+<!-- 将$scope 对象当作一个参数传递-->
+<script type="text/javascript">
+	var app=angular.module('myApp',[]);
+	app.controller('myName',function($scope,$rootScope){
+		$scope.names=["jenny","john","denkin"];
+		$rootScope.lastname = "Rojhfr";
+	});
+</script>
+</html>

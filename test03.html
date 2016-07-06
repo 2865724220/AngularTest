@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS test04</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+     <!-- 双向数据绑定 -->
+	<div ng-app="myApp" ng-controller="nameCtrl">
+		姓名：<input type="text" ng-model="name">
+		<p>
+			你输入了：{{name}}  
+		</p>
+	</div>
+	
+
+</body>
+<script type="text/javascript">
+	var app=angular.module('myApp',[]);
+	app.controller('nameCtrl',function($scope){
+		$scope.name="";
+	});
+</script>
+</html>
